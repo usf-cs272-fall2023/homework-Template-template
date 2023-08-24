@@ -1,0 +1,11 @@
+name: Late Homework Request
+
+on:
+  issues:
+    types: [opened, reopened]
+
+jobs:
+  main:
+    name: Main
+    uses: usf-cs272-spring2023/cs272-bot/.github/workflows/homework-late.yml@main
+    secrets: inherit

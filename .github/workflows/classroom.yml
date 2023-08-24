@@ -1,0 +1,36 @@
+name: Gradebot
+
+on:
+  push:
+    branches: [main]
+
+  workflow_dispatch:
+    # inputs:
+    #   extension_hours:
+    #     description: Amount of extension granted (in hours)
+    #     default: '0'
+    #     required: false
+    #     type: number
+
+    #   min_commits:
+    #     description: 'Minimum number of commits required to earn credit'
+    #     default: '3'
+    #     required: true
+    #     type: number
+
+permissions:
+  checks: write
+  actions: read
+  contents: read
+
+jobs:
+  main:
+    name: Main
+    uses: usf-cs272-fall2023/cs272-bot/.github/workflows/homework-grade.yml@main
+    secrets: inherit
+
+    # with:
+    #   extension_hours: ${{ inputs.extension_hours }}
+    #   min_commits: ${{ inputs.min_commits }}
+
+
