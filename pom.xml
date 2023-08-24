@@ -68,7 +68,6 @@
 					<excludes>
 						<exclude />
 					</excludes>
-					<trimStackTrace>true</trimStackTrace>
 					<useFile>false</useFile>
 				</configuration>
 			</plugin>
