@@ -1,4 +1,4 @@
-name: Late Homework Request
+name: IssueBot
 
 on:
   issues:
@@ -6,6 +6,18 @@ on:
 
 jobs:
   main:
-    name: Main
-    uses: usf-cs272-spring2023/cs272-bot/.github/workflows/homework-late.yml@main
-    secrets: inherit
+    name: Grade Late Homework
+    runs-on: ubuntu-latest
+
+    env:
+      ERROR_MESSAGE: 'Unknown error'
+      GRADE_RUNID: ''
+
+    steps:
+      - name: Grade Late Homework
+        uses: usf-cs272-fall2023/cs272-bot/homework/issues@main
+        with:
+          access_token: ${{ secrets.GITHUB_TOKEN }}
+          artifact_name: "check-deadline-results"
+          artifact_json: "check-deadline-results.json"
+          workflow_name: "classroom.yml"

@@ -14,7 +14,11 @@ public class Template {
 	}
 
 	public static void main(String[] args) {
+		// test
 		
 	}
 
+	public static void hello() {
+		System.out.println("Hello");
+	}
 }

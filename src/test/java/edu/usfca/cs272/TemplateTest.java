@@ -145,7 +145,7 @@ public class TemplateTest {
 		@Test
 		@Order(1)
 		public void testFail() {
-			Integer hello = Integer.parseInt("hello");
+			Integer.parseInt("hello");
 		}
 	}
 
