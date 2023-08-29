@@ -17,7 +17,6 @@ jobs:
       - name: Processing late grade request
         uses: usf-cs272-fall2023/cs272-bot/homework/issues@main
         with:
-          access_token: ${{ secrets.GITHUB_TOKEN }}
           known_users: ${{ secrets.KNOWN_USERS }}
           artifact_name: "check-deadline-results"
           artifact_json: "check-deadline-results.json"
