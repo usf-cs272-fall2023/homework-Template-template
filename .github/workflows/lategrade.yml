@@ -14,7 +14,7 @@ jobs:
       GRADE_RUNID: ''
 
     steps:
-      - name: Grade Late Homework
+      - name: Processing late grade request
         uses: usf-cs272-fall2023/cs272-bot/homework/issues@main
         with:
           access_token: ${{ secrets.GITHUB_TOKEN }}
